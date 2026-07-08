@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#0b0f14"/><stop offset="1" stop-color="#05070a"/>
+  </linearGradient>
+  <radialGradient id="halo" cx="0.5" cy="0.4" r="0.6">
+   <stop offset="0" stop-color="#153039" stop-opacity="0.85"/><stop offset="1" stop-color="#05070a" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0">
+   <stop offset="0" stop-color="#38e1c4" stop-opacity="0"/><stop offset="0.5" stop-color="#8ff7e6"/><stop offset="1" stop-color="#38e1c4" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#b9c4cc"/>
+  </linearGradient>
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
+ </defs>
+ <rect width="1080" height="1080" fill="url(#bg)"/>
+ <rect width="1080" height="1080" fill="url(#halo)"/>
+ <rect x="240" y="188" width="600" height="4" rx="2" fill="url(#blade)" filter="url(#glow)"/>
+ <rect x="240" y="188" width="600" height="4" rx="2" fill="url(#blade)"/>
+
+ <text x="540" y="150" text-anchor="middle" fill="#7f8b93" font-family="'PingFang SC',Helvetica,Arial,sans-serif" font-size="30" letter-spacing="8">LONG PRESS · 长按识别二维码</text>
+ <text x="540" y="300" text-anchor="middle" fill="url(#silver)" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="92" font-weight="700" letter-spacing="8">LUMEN L7</text>
+ <text x="540" y="356" text-anchor="middle" fill="#38e1c4" font-family="'PingFang SC',Helvetica,Arial,sans-serif" font-size="34" letter-spacing="10">发布会 · 完整 Keynote</text>
+
+ <!-- white panel + QR -->
+ <rect x="330" y="410" width="420" height="420" rx="28" fill="#ffffff"/>
+ <image x="360" y="440" width="360" height="360" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAALQAQMAAACDmdXfAAAABlBMVEULDxT///+SNTgHAAADSElEQVR42u3dy44aQQwF0Fb+/5+TRYK6yr7NYlQmCw4SGqCbo1EtrixTj+v32ONCo9FoNBqNRqO/kr62x99PXs/18/X69e+fuv9W49c19kCj0ejvo681c+/XKbn3lL7fPxnGGo1Goyfy+q6h11o55/ed3Ot3dkNeo9Fo9Gfzer+aKnB5jUaj0f8rr3MHJDS/3xrGGo1GoyfyOvWv69WeyXt9rX+NRqPR03m9f/KzZ1WNNRqNRp/O6zjRr3U61tr63TdfD2ONRqPRM3l9Z3H6jbHeuXZF1o7J/dpYo9Fo9Pl+SF0D0xN5TeJ6JWW6vEaj0eiZvO7zQNbux3rPnuB9Tp+8RqPR6Ml+yJ6+tcreZ4fUTN+r8dd1Y41Go9FT/ZC8fvH57prk5vOh0Wj0dF7vnef9fc/uWm2n+X3yGo1Goyf6IXt2p1d1Jc3zXBJ5jUaj0ZP9kDWTn3Z9yjuq1tz2eyMajUZP90Ny7VzXmff15/mdsUaj0ejz/ZDcqU6/QvZ70mfyGo1Go2fyuu7M9/7zp31W9zncxhqNRqPP90PSjtb1NLC8u0jdo0//Go1Goyfzet/TKc+qrmseX69qwquv0Wg0erYfkk9rTL9I9pPA0rxtY41Go9Hn87p3qNc87vs+pRki5vOh0Wj0Z9c3PvdJ+llhva9957ixRqPR6Il+SF9PvuZzX1XzlOr2e0Kj0ejJ+rqvglnvWP+mFTP57BljjUaj0efr696Hfqqna3b3Kt38EDQajf5MfZ1q6b5jSF89U3+bNNZoNBp9Pq9ThZxOj+l3pDkj8hqNRqPn6uu9O5Ku5Go6nwApr9FoNHq2vu47O+13rd97vze2vEaj0eipvE77gfT5fv1U3t7lltdoNBo9m9d9Z5Ce02uG13MN9p6KsUaj0ejTeZ3n9PWudP/unuf7O2ONRqPRE/V1TeE6x/p5v+v16pr6xhqNRqPP53U9yyuf6JhOKlBfo9Fo9Gfzes/fPYtrRyR3vGtVbqzRaDT6s3lds7ufnJ5PqTHWaDQaPZ3X+aTGtItfFdbvGms0Go2eyOs0n/rug9RZ17WjnTLfWKPRaPT5vM4Vd8/m2v2oayHND0Gj0ejJvJ55oNFoNBqNRqPRX0f/AUj4RjMiIYnTAAAAAElFTkSuQmCC"/>
+
+ <text x="540" y="906" text-anchor="middle" fill="#eaf2f4" font-family="'PingFang SC',Helvetica,Arial,sans-serif" font-size="42" font-weight="600" letter-spacing="4">扫码看完整发布会 deck</text>
+ <text x="540" y="958" text-anchor="middle" fill="#8b969d" font-family="'PingFang SC',Helvetica,Arial,sans-serif" font-size="28" letter-spacing="2">含逐屏数字动画 · 手机上滑一遍更有感觉</text>
+ <text x="540" y="1020" text-anchor="middle" fill="#4f595f" font-family="Helvetica,Arial,sans-serif" font-size="22" letter-spacing="3">work-studio.baobaobao.online</text>
+</svg>
