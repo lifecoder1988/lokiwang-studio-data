@@ -4,7 +4,9 @@ slug: lumen-l7-claude-ppt
 date: 2026-07-08
 tags: [claude, ppt, keynote, ev, vibe]
 work: https://work-studio.baobaobao.online/works/lumen-l7
-status: draft
+status: published
+published_url: https://lokiwang.com/posts/lumen-l7-claude-ppt
+post_id: 118
 ---
 
 # 我让 Claude 办了场汽车发布会，PPT 做完我有点绷不住
