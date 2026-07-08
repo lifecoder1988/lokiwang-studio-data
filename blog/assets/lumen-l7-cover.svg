@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0f14"/>
+      <stop offset="0.55" stop-color="#0a0d12"/>
+      <stop offset="1" stop-color="#05070a"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.46" r="0.62">
+      <stop offset="0" stop-color="#1b3a44" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#0c1a20" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#05070a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38e1c4" stop-opacity="0"/>
+      <stop offset="0.12" stop-color="#38e1c4" stop-opacity="0.55"/>
+      <stop offset="0.5" stop-color="#8ff7e6" stop-opacity="1"/>
+      <stop offset="0.88" stop-color="#38e1c4" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#38e1c4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b9c4cc"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-400%" width="180%" height="900%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#halo)"/>
+
+  <!-- 光刃 / the signature 1.4m light blade -->
+  <g filter="url(#glow)">
+    <rect x="230" y="470" width="1140" height="5" rx="2.5" fill="url(#blade)"/>
+  </g>
+  <ellipse cx="800" cy="472" rx="360" ry="22" fill="#38e1c4" opacity="0.18" filter="url(#glow)"/>
+
+  <!-- kicker -->
+  <text x="800" y="196" text-anchor="middle" fill="#7f8b93"
+        font-family="'PingFang SC','Helvetica Neue',Helvetica,Arial,sans-serif"
+        font-size="26" letter-spacing="10">AI KEYNOTE · 用 CLAUDE 做的发布会</text>
+
+  <!-- wordmark -->
+  <text x="800" y="392" text-anchor="middle" fill="url(#silver)"
+        font-family="'Helvetica Neue',Helvetica,Arial,sans-serif"
+        font-size="188" font-weight="700" letter-spacing="14">LUMEN</text>
+  <text x="800" y="452" text-anchor="middle" fill="#38e1c4"
+        font-family="'Helvetica Neue',Helvetica,Arial,sans-serif"
+        font-size="40" font-weight="600" letter-spacing="26">L7 · 流明汽车</text>
+
+  <!-- tagline below the blade -->
+  <text x="800" y="612" text-anchor="middle" fill="#eaf2f4"
+        font-family="'PingFang SC','Helvetica Neue',Helvetica,Arial,sans-serif"
+        font-size="76" font-weight="600" letter-spacing="18">为 光 而 来</text>
+  <text x="800" y="678" text-anchor="middle" fill="#8b969d"
+        font-family="'PingFang SC','Helvetica Neue',Helvetica,Arial,sans-serif"
+        font-size="30" letter-spacing="4">三年，一款车。 · 下一代智能电动旗舰</text>
+
+  <!-- footer strip -->
+  <text x="800" y="812" text-anchor="middle" fill="#5c666d"
+        font-family="'PingFang SC','Helvetica Neue',Helvetica,Arial,sans-serif"
+        font-size="24" letter-spacing="6">673 PS · 0–100 km/h 2.9s · 900V · CLTC 820km</text>
+</svg>

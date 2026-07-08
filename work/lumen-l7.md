@@ -36,3 +36,5 @@ tags: [ppt, keynote, ev, claude, work-show]
 ## 关联
 
 - 博客：[[blog/lumen-l7-claude-ppt]]（用 blog-writing-style 写的解读）
+- 线上作品集：lokiwang.com works id `121`（status live，封面复用博客封面）
+- 线上博客：<https://lokiwang.com/posts/lumen-l7-claude-ppt>（post id 118）

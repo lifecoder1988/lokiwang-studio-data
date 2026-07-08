@@ -7,6 +7,8 @@ work: https://work-studio.baobaobao.online/works/lumen-l7
 status: published
 published_url: https://lokiwang.com/posts/lumen-l7-claude-ppt
 post_id: 118
+cover: assets/lumen-l7-cover.png
+cover_url: /api/media/uploads/2026/07/1783502264954-cover.png
 ---
 
 # 我让 Claude 办了场汽车发布会，PPT 做完我有点绷不住
