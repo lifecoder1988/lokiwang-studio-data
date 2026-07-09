@@ -6,6 +6,8 @@ tags: [claude, claude-code, saas, openspec, vibe-coding]
 work: https://pdl.baobaobao.online/
 status: published
 cover: assets/formforge/cover.png
+published_url: https://lokiwang.com/posts/formforge-with-claude
+post_id: 123
 ---
 
 # 我让 Claude 从零做了个 SaaS，最颠覆我的不是它会写代码
