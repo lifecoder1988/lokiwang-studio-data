@@ -4,7 +4,7 @@ slug: yy-stay-home-900-vs-107
 date: 2026-07-14
 tags: [claude, claude-code, taro, miniapp, golang, cccost]
 status: published
-cover: assets/yy-stay-home/cover.jpg
+cover: assets/yy-stay-home/cover-hero.jpg
 published_url: https://lokiwang.com/journal/yy-stay-home-900-vs-107
 post_id: 150
 ---
