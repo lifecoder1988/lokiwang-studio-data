@@ -3,8 +3,10 @@ title: I Spent $41 on 21 Seconds of Animation. I Thought I Was Resizing People �
 slug: remotion-paper-collage-41-dollars
 date: 2026-07-15
 tags: [claude, claude-code, remotion, react, minimax, cccost]
-status: draft
-cover: assets/remotion-paper-collage/cover.jpg
+status: published
+cover: /api/media/uploads/2026/07/1784116871088-cover.jpg
+published_url: https://lokiwang.com/journal/remotion-paper-collage-41-dollars
+post_id: 153
 ---
 
 # I Spent $41 on 21 Seconds of Animation. I Thought I Was Resizing People — I Was Resizing Air.
@@ -23,7 +25,7 @@ I wanted one video. I wanted the pipeline forever… (that distinction ended up 
 
 An hour later, the sample render came out: 21 seconds, 1920×1080, on the theme *All Nations Come to Court*.
 
-![First shot of the sample: plate, emperor, attendants, courtiers — four layers, each flying in separately](assets/remotion-paper-collage/cover.jpg)
+![First shot of the sample: plate, emperor, attendants, courtiers — four layers, each flying in separately](/api/media/uploads/2026/07/1784116871088-cover.jpg)
 
 The bill: **$41.20**.
 
@@ -41,13 +43,13 @@ But think about it: the moment a figure is glued to the plate, you can no longer
 
 So when you generate the plate, the prompt has to **say NO PEOPLE, loudly**:
 
-![The plate: nobody in it, with the lower half deliberately left open for figures to stand in](assets/remotion-paper-collage/plate-no-people.jpg)
+![The plate: nobody in it, with the lower half deliberately left open for figures to stand in](/api/media/uploads/2026/07/1784116876731-plate-no-people.jpg)
 
 Unsettlingly empty, right? That's what correct looks like.
 
 Then each character gets generated alone, on transparent:
 
-![Five characters, each its own transparent PNG](assets/remotion-paper-collage/layers-strip.jpg)
+![Five characters, each its own transparent PNG](/api/media/uploads/2026/07/1784116880998-layers-strip.jpg)
 
 Finally, Remotion stacks them: `plate → back row → mid → lead → front row → captions`.
 
@@ -110,7 +112,7 @@ A 2.5× spread.
 
 So what happens if you give them all a shared width of 400px?
 
-![Same 400px width: the courtier towers out of the frame and dwarfs the emperor](assets/remotion-paper-collage/size-by-height.jpg)
+![Same 400px width: the courtier towers out of the frame and dwarfs the emperor](/api/media/uploads/2026/07/1784116885416-size-by-height.jpg)
 
 Left: the courtier renders 400×1143 and his head runs straight out of the 1080 frame, while the emperor shrinks to 400×449. **The lead is smaller than the extra. The hierarchy is inverted.**
 
@@ -202,13 +204,13 @@ That last one is the sneaky one. If `mean_volume` reads -91dB, the track exists,
 
 Then it extracts 5 stills for a human pass: heads/hands/feet cropped, figures facing the wrong way, lead not clearly the largest, captions covering a key prop.
 
-![Close shot: the lead holds a gift box, envoys kneel on both sides, back-row courtiers barely move](assets/remotion-paper-collage/frame-close.jpg)
+![Close shot: the lead holds a gift box, envoys kneel on both sides, back-row courtiers barely move](/api/media/uploads/2026/07/1784116891095-frame-close.jpg)
 
 ## 09 What actually shipped
 
 Watch it first (21 seconds, sound on):
 
-<video src="assets/remotion-paper-collage/paper-collage-demo.mp4" controls playsinline preload="metadata" poster="assets/remotion-paper-collage/cover.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1784116948202-paper-collage-demo.mp4" controls playsinline preload="metadata" poster="/api/media/uploads/2026/07/1784116871088-cover.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
 
 Specs: 1920×1080, 30fps, h264 + aac, 633 frames (wide 322 + close 311), 21.16 seconds, 52MB.
 
