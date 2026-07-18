@@ -20,6 +20,7 @@ up() { # up <本地文件> <逻辑名>
 }
 
 # 文章图片
+up "$ASSETS/cover-generated.png"    IMG_cover-generated
 up "$ASSETS/cover-collage.png"      IMG_cover-collage
 up "$ASSETS/air-explode-still.png"  IMG_air-explode-still
 up "$ASSETS/oled-cover.png"         IMG_oled-cover
@@ -58,7 +59,7 @@ missing = re.findall(r'\{\{V:[a-z0-9-]+\}\}|assets/four-sites-one-day', text)
 if missing: print('WARN unresolved:', missing, file=sys.stderr); sys.exit(1)
 PY
 
-COVER=$(grep '^IMG_cover-collage ' "$MAP" | cut -d' ' -f2)
+COVER=$(grep '^IMG_cover-generated ' "$MAP" | cut -d' ' -f2)
 
 # 建草稿
 POST_JSON=$($BLOGCTL posts create \

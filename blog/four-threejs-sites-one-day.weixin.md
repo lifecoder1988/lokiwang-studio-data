@@ -2,7 +2,7 @@
 title: 拆空调、拆电视、拆主机，再推倒 1095 张多米诺：一天上线 4 个 three.js 网站
 platform: weixin
 source: four-threejs-sites-one-day
-cover: assets/four-sites-one-day/cover-collage.png
+cover: assets/four-sites-one-day/cover-generated-mp.png
 ---
 
 # 拆空调、拆电视、拆主机，再推倒 1095 张多米诺：一天上线 4 个 three.js 网站

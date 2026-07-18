@@ -4,7 +4,7 @@ slug: four-threejs-sites-one-day
 date: 2026-07-18
 tags: [claude, claude-code, three-js, rapier, webgl]
 status: draft
-cover: assets/four-sites-one-day/cover-collage.png
+cover: assets/four-sites-one-day/cover-generated.png
 ---
 
 # 拆空调、拆电视、拆主机，再推倒 1095 张多米诺：一天上线 4 个 three.js 网站
