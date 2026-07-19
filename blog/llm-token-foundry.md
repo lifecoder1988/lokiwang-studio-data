@@ -4,7 +4,7 @@ slug: llm-token-foundry
 date: 2026-07-19
 tags: [claude, claude-code, three-js, llm, webgl]
 status: draft
-cover: assets/llm-token-foundry/cover.png
+cover: assets/llm-token-foundry/cover-generated.png
 ---
 
 # ChatGPT 为什么一个字一个字往外蹦？我盖了座 3D「炼词厂」给你看

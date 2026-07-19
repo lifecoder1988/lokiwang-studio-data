@@ -2,7 +2,7 @@
 title: ChatGPT 为什么一个字一个字往外蹦？我盖了座 3D「炼词厂」给你看
 platform: weixin
 source: llm-token-foundry
-cover: assets/llm-token-foundry/cover-mp.png
+cover: assets/llm-token-foundry/cover-generated-mp.png
 ---
 
 # ChatGPT 为什么一个字一个字往外蹦？我盖了座 3D「炼词厂」给你看

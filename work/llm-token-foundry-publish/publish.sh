@@ -19,6 +19,7 @@ up() { # up <本地文件> <逻辑名>
 }
 
 # 文章图片
+up "$ASSETS/cover-generated.png" IMG_cover-generated
 up "$ASSETS/cover.png"         IMG_cover
 up "$ASSETS/inf-attn.png"      IMG_inf-attn
 up "$ASSETS/inf-bars.png"      IMG_inf-bars
@@ -57,7 +58,7 @@ missing = re.findall(r'\{\{V:[a-z0-9-]+\}\}|assets/llm-token-foundry', text)
 if missing: print('WARN unresolved:', missing, file=sys.stderr); sys.exit(1)
 PY
 
-COVER=$(grep '^IMG_cover ' "$MAP" | cut -d' ' -f2)
+COVER=$(grep '^IMG_cover-generated ' "$MAP" | cut -d' ' -f2)
 
 # 建草稿
 POST_JSON=$($BLOGCTL posts create \
