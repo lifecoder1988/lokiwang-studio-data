@@ -1,6 +1,8 @@
-# llm-token-foundry 一键线上发布(待执行)
+# llm-token-foundry 一键线上发布(已于 2026-07-20 执行完毕)
 
-文章与素材已就绪但**尚未发布到 lokiwang.com**(本机没有后台凭据)。要发布时:
+**已发布**:post_id=173,https://lokiwang.com/journal/llm-token-foundry ;作品条目 id=176(order 9)。媒体 URL 见 `media-map.txt`,`blog/llm-token-foundry.md` frontmatter 已回填。
+
+以下为当时的执行说明(存档)。要重新发布时:
 
 ```bash
 cd work/llm-token-foundry-publish

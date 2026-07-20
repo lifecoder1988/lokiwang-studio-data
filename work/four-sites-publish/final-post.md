@@ -1,16 +1,3 @@
----
-title: 拆空调、拆电视、拆主机，再推倒 1095 张多米诺：一天上线 4 个 three.js 网站
-slug: four-threejs-sites-one-day
-date: 2026-07-18
-tags: [claude, claude-code, three-js, rapier, webgl]
-status: published
-published_url: https://lokiwang.com/journal/four-threejs-sites-one-day
-post_id: 162
-cover: /api/media/uploads/2026/07/1784545669163-cover-generated.png
----
-
-# 拆空调、拆电视、拆主机，再推倒 1095 张多米诺：一天上线 4 个 three.js 网站
-
 昨天翻 GitHub 的时候，我自己都愣了一下。
 
 7 月 17 日这一天，账号里多了 4 个仓库：15:06、15:07、15:07、19:03。
@@ -45,7 +32,7 @@ cover: /api/media/uploads/2026/07/1784545669163-cover-generated.png
 
 但我最喜欢的是**开机试运行**：
 
-<video src="/api/media/uploads/2026/07/1784545704972-air-run.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1784545704972-air-run.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px" poster="/api/media/uploads/2026/07/1784545693317-air-cover.png"></video>
 
 贯流风轮转起来，导风板扫风，蓝色冷气沉到地板上铺开——对，冷空气是往下沉的，它连这个都做了。
 
@@ -67,7 +54,7 @@ cover: /api/media/uploads/2026/07/1784545669163-cover-generated.png
 
 真正值回票价的是**观影模式**：
 
-<video src="/api/media/uploads/2026/07/1784545761874-oled-watch.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1784545761874-oled-watch.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px" poster="/api/media/uploads/2026/07/1784545680015-oled-cover.png"></video>
 
 开机后屏幕开始播动态画面（极光演示片、检测彩条、或者一个合成波风格的赛车游戏），然后整个房间被屏幕照亮。
 
@@ -93,7 +80,7 @@ cover: /api/media/uploads/2026/07/1784545669163-cover-generated.png
 
 开机之后是另一个站：
 
-<video src="/api/media/uploads/2026/07/1784545768654-ps5-game.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1784545768654-ps5-game.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px" poster="/api/media/uploads/2026/07/1784545683495-ps5-cover.png"></video>
 
 显示器点亮，可以切主界面、竞速演示、性能面板三种画面；主机灯带白蓝呼吸，手柄灯条亮起。
 
@@ -111,7 +98,7 @@ cover: /api/media/uploads/2026/07/1784545669163-cover-generated.png
 
 一块标准足球场（105 × 68 米），上面码了 **1095 张 2.2 米高的巨型骨牌**，路线全长约 1.1 公里。
 
-<video src="/api/media/uploads/2026/07/1784545811748-domino-full.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1784545811748-domino-full.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px" poster="/api/media/uploads/2026/07/1784545696856-domino-cover.png"></video>
 
 重点来了：**全程没有一帧脚本动画。**
 

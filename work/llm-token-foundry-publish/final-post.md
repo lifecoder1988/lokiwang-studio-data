@@ -1,16 +1,3 @@
----
-title: ChatGPT 为什么一个字一个字往外蹦？我盖了座 3D「炼词厂」给你看
-slug: llm-token-foundry
-date: 2026-07-19
-tags: [claude, claude-code, three-js, llm, webgl]
-status: published
-published_url: https://lokiwang.com/journal/llm-token-foundry
-post_id: 173
-cover: /api/media/uploads/2026/07/1784545890501-cover-generated.png
----
-
-# ChatGPT 为什么一个字一个字往外蹦？我盖了座 3D「炼词厂」给你看
-
 你肯定见过 ChatGPT 打字的样子。
 
 一个字，一个字，往外蹦。
@@ -57,7 +44,7 @@ cover: /api/media/uploads/2026/07/1784545890501-cover-generated.png
 
 先看推理，也就是你每天用 ChatGPT 时它在干的事：
 
-<video src="/api/media/uploads/2026/07/1784545930542-inference.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1784545930542-inference.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px" poster="/api/media/uploads/2026/07/1784545917755-inf-done.png"></video>
 
 场景很简单：一块厂区地皮，前面一排彩色**词牌**，后面一栋 6 层的半透明大楼。
 
@@ -131,7 +118,7 @@ demo 里还藏了个「上帝之手」：概率柱立起来的那一秒多里，
 
 分数是**训练**出来的。切到训练模式，工厂进入夜场：
 
-<video src="/api/media/uploads/2026/07/1784545942844-training.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1784545942844-training.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px" poster="/api/media/uploads/2026/07/1784545921422-trn-forward.png"></video>
 
 地皮上换了一批原料：4 句语料，每句 8 张词牌。这批语料本身就很「教科书」——「大模型在海量语料上学习规律」「反向传播把误差传回每一层权重」……用来训练的课文，讲的就是训练本身，有点套娃。
 

@@ -1,6 +1,8 @@
-# four-threejs-sites-one-day 一键线上发布(待执行)
+# four-threejs-sites-one-day 一键线上发布(已于 2026-07-20 执行完毕)
 
-文章与素材已就绪但**尚未发布到 lokiwang.com**(2026-07-18 决定暂缓)。要发布时:
+**已发布**:post_id=162,https://lokiwang.com/journal/four-threejs-sites-one-day ;4 个作品条目 id=164/166/168/170(order 5–8)。媒体 URL 见 `media-map.txt`,`blog/four-threejs-sites-one-day.md` frontmatter 已回填。
+
+以下为当时的执行说明(存档)。要重新发布时:
 
 ```bash
 cd work/four-sites-publish
