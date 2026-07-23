@@ -1,0 +1,15 @@
+IMG_black-edge-bug.png /api/media/uploads/2026/07/1784805143300-black-edge-bug.png
+IMG_clip-farming.gif /api/media/uploads/2026/07/1784805148209-clip-farming.gif
+IMG_clip-mine.gif /api/media/uploads/2026/07/1784805153310-clip-mine.gif
+IMG_clip-night.gif /api/media/uploads/2026/07/1784805157843-clip-night.gif
+IMG_clip-town.gif /api/media/uploads/2026/07/1784805161928-clip-town.gif
+IMG_cover-mp.png /api/media/uploads/2026/07/1784805165722-cover-mp.png
+IMG_cover.png /api/media/uploads/2026/07/1784805169700-cover.png
+IMG_demo.mp4 /api/media/uploads/2026/07/1784805178006-demo.mp4
+IMG_dialog.jpg /api/media/uploads/2026/07/1784805182164-dialog.jpg
+IMG_farm-ingame.jpg /api/media/uploads/2026/07/1784805185496-farm-ingame.jpg
+IMG_farm-standard.png /api/media/uploads/2026/07/1784805189011-farm-standard.png
+IMG_mine.jpg /api/media/uploads/2026/07/1784805191658-mine.jpg
+IMG_shop.jpg /api/media/uploads/2026/07/1784805194393-shop.jpg
+IMG_summary.jpg /api/media/uploads/2026/07/1784805196958-summary.jpg
+IMG_white-edge.png /api/media/uploads/2026/07/1784805199024-white-edge.png
