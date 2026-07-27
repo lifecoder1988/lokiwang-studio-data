@@ -10,13 +10,18 @@ BLOGCTL=/Users/joe/code/joewang-studio/.claude/skills/blog-admin/cli/target/rele
 SLUG=ink-fighter-godot-154-dollars
 ASSETS=/Users/joe/code/lokiwang-studio-data/blog/assets/$SLUG
 MAP=$SCRATCH/media-map.txt
-: > "$MAP"
+touch "$MAP"
 
-up() { # up <本地文件> <逻辑名>
-  local url
-  url=$($BLOGCTL media upload "$1" | python3 -c "import json,sys; print(json.load(sys.stdin)['url'])")
-  echo "$2 $url" >> "$MAP"
-  echo "uploaded $2 -> $url" >&2
+up() { # up <本地文件> <逻辑名>  —— 断点续传:已在 media-map 里就跳过
+  local f="$1" name="$2" url
+  if grep -q "^$name " "$MAP"; then echo "skip $name" >&2; return; fi
+  for i in 1 2 3 4 5; do
+    if url=$($BLOGCTL media upload "$f" | python3 -c "import json,sys; print(json.load(sys.stdin,strict=False)['url'])"); then
+      echo "$name $url" >> "$MAP"; echo "uploaded $name -> $url" >&2; return
+    fi
+    echo "retry $name ($i)" >&2; sleep 5
+  done
+  echo "FAILED $name" >&2; exit 1
 }
 
 # 封面(博客 16:9)
@@ -66,7 +71,8 @@ POST_JSON=$($BLOGCTL posts create \
   --tags "claude,claude-code,godot,game-dev,fable-5,ultracode" \
   --cover "$COVER" \
   --content-file "$SCRATCH/final-post.md" --markdown)
-POST_ID=$(echo "$POST_JSON" | python3 -c "import json,sys; print(json.load(sys.stdin)['id'])")
+POST_ID=$(echo "$POST_JSON" | python3 -c "import json,sys; print(json.load(sys.stdin,strict=False)['id'])")
+echo "$POST_ID" > "$SCRATCH/post-id.txt"
 echo "post created: id=$POST_ID"
 
 # 发布

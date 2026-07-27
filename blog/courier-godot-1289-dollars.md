@@ -3,8 +3,10 @@ title: 1289 刀，Claude 手搓了个 3D 送外卖游戏，跑完一天我再没
 slug: courier-godot-1289-dollars
 date: 2026-07-25
 tags: [claude, claude-code, godot, game-dev, courier, cccost]
-status: draft
-cover: assets/courier-godot-1289-dollars/cover.png
+status: published
+published_url: https://lokiwang.com/journal/courier-godot-1289-dollars
+post_id: 190
+cover: /api/media/uploads/2026/07/1785152753225-cover.png
 ---
 
 # 1289 刀，Claude 手搓了个 3D 送外卖游戏，跑完一天我再没敢催过单
@@ -15,7 +17,7 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 先看 60 秒。这不是我玩的，是它自己写脚本、用真实按键把一天跑了一遍：
 
-<video src="assets/courier-godot-1289-dollars/gameplay-highlight.mp4" controls playsinline preload="metadata" poster="assets/courier-godot-1289-dollars/gameplay-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1785152797748-gameplay-highlight.mp4" controls playsinline preload="metadata" poster="/api/media/uploads/2026/07/1785152755540-gameplay-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
 
 照例声明：非商业学习复刻，美术音频全是 AI 生成或程序合成，没用任何现成资产。妹团、单王这些也都是玩梗，别对号入座。
 
@@ -29,7 +31,7 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 就这一句，把一个「爽游」按回了地面。基础价我让它压到 **¥4 起步**，每米加几分钱，一单也就 **3 到 12 块**。
 
-![HUD 全中文：钱、班次倒计时、体力环、航向、小地图——一眼就是「上班」的界面](assets/courier-godot-1289-dollars/hud.jpg)
+![HUD 全中文：钱、班次倒计时、体力环、航向、小地图——一眼就是「上班」的界面](/api/media/uploads/2026/07/1785152758029-hud.jpg)
 
 从这句话起，它就不是个游戏了，是面镜子。
 
@@ -37,7 +39,7 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 我又给它加了背景故事。开局这块牌子，是它自己写的文案：
 
-![「讨债的日子」——爸赌、妈病、10 万高利贷、每天 300 利息，还不上别怪我们不客气](assets/courier-godot-1289-dollars/story.jpg)
+![「讨债的日子」——爸赌、妈病、10 万高利贷、每天 300 利息，还不上别怪我们不客气](/api/media/uploads/2026/07/1785152762411-story.jpg)
 
 「利滚利，7 天里每天都得还上 ¥300 利息——还不上，别怪我们不客气。」
 
@@ -47,7 +49,7 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 右下角掏出手机，「妹团·抢单大厅」（对，美团的梗）弹出来。一次只能接一单，屏幕上明明白白写着：取送点、**距离**、**重量**、预估 ¥、时限。
 
-![妹团抢单大厅：酒吧街→阳光小区 ¥56、望京公寓→酒吧街 ¥9、阳光小区→海底捞 ¥11](assets/courier-godot-1289-dollars/dispatch.jpg)
+![妹团抢单大厅：酒吧街→阳光小区 ¥56、望京公寓→酒吧街 ¥9、阳光小区→海底捞 ¥11](/api/media/uploads/2026/07/1785152764837-dispatch.jpg)
 
 越重的货，把电动车压得越慢（8kg 直接掉到七折速度）。越远的单，给的钱多一点、时限也松一点。你得在「多接远单冲业绩」和「时限内送到」之间赌。
 
@@ -57,11 +59,11 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 路口是有红绿灯的。绿灯放心冲，红灯……你懂的，赶时间的人谁看灯。
 
-![闯红灯的一瞬间，整个路口糊上一层红](assets/courier-godot-1289-dollars/gif-redlight.gif)
+![闯红灯的一瞬间，整个路口糊上一层红](/api/media/uploads/2026/07/1785152769248-gif-redlight.gif)
 
 问题是路口蹲着警察。闯红灯 **35% 概率被抓**，附近有警察再 +40%。被抓一次，**罚 ¥6**。
 
-![「闯红灯被警察抓住，罚款 ¥6！」](assets/courier-godot-1289-dollars/redlight-fine.jpg)
+![「闯红灯被警察抓住，罚款 ¥6！」](/api/media/uploads/2026/07/1785152771914-redlight-fine.jpg)
 
 ¥6 是什么概念？是你刚才辛辛苦苦送完的一整单。**罚一次，等于白跑一趟。** 但你还是会闯，因为时限在倒数。
 
@@ -69,7 +71,7 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 骑久了、送多了、冲刺多了，**体力**会掉。高于 60 满速跑；低于 20，每隔几秒就有 **25% 概率原地摔一跤**——冻结、扣时间，还得付 **¥5 医药费**，被送去医院重生。
 
-![累到 20 以下，这一脚下去随时可能是医院](assets/courier-godot-1289-dollars/night-ride.jpg)
+![累到 20 以下，这一脚下去随时可能是医院](/api/media/uploads/2026/07/1785152774443-night-ride.jpg)
 
 想歇？路边便利店能回体力，但吃口东西也要 ¥2。**在这游戏里，连喘口气都是花钱的。**
 
@@ -77,11 +79,11 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 有些单不是骑到楼下就完事的。**只能步行的小区、要上楼的单元楼**——门口得下车，切成一个小人，WASD 走进去。
 
-![下车步行送 8 楼（WASD 走到门口）](assets/courier-godot-1289-dollars/gif-onfoot.gif)
+![下车步行送 8 楼（WASD 走到门口）](/api/media/uploads/2026/07/1785152780048-gif-onfoot.gif)
 
 到了单元楼底下，还得挤电梯，一层一层往上爬。
 
-![电梯 · 1F · 上行中，前往 6 楼](assets/courier-godot-1289-dollars/elevator.jpg)
+![电梯 · 1F · 上行中，前往 6 楼](/api/media/uploads/2026/07/1785152782114-elevator.jpg)
 
 上楼单会多给点溢价（每层 ¥4），可那点钱，换的是你爬楼梯、等电梯、跑断腿的时间。谁都知道不划算，但单子就在那儿。
 
@@ -89,7 +91,7 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 到了门口触发**当面交付**。收货人（约 20% 不在，得打电话）会说一句话，你从几个回复里挑一个——**你说什么话、有没有准时，决定评价星级和小费。**
 
-![「小哥辛苦啦，我正好在等。」——你的外卖到了请慢用 / 麻烦签收一下 / 喏，拿好](assets/courier-godot-1289-dollars/delivery.jpg)
+![「小哥辛苦啦，我正好在等。」——你的外卖到了请慢用 / 麻烦签收一下 / 喏，拿好](/api/media/uploads/2026/07/1785152784438-delivery.jpg)
 
 准时 + 一句「您的外卖到了，请慢用～」，好评 ★★★，+¥3 小费。超时了对方甩你一句「怎么这么慢」，你要是回「爱要不要」——差评，一分不给。
 
@@ -99,7 +101,7 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 天黑了要开车灯，班次时间一到，收工结算。看一眼这张成绩单：
 
-![第 1 天收工：7 单、¥348、准时率 100%、闯红灯罚 ¥30（5 次）、车祸 0 次](assets/courier-godot-1289-dollars/summary.jpg)
+![第 1 天收工：7 单、¥348、准时率 100%、闯红灯罚 ¥30（5 次）、车祸 0 次](/api/media/uploads/2026/07/1785152787061-summary.jpg)
 
 跑了整整一天，**7 单，收入 ¥348**。刚够还今天的 300，还剩 48。可你看那行小字——**闯红灯罚了 ¥30，5 次。** 等于白送了 5 单。
 
@@ -109,7 +111,7 @@ cover: assets/courier-godot-1289-dollars/cover.png
 
 聊回开发。你以为最难的是画质？我确实问过它「画质能不能做到蜘蛛侠那种水平」，最后靠 CC0 的 HDRI 天空 + PBR 路面 + 程序化窗户 shader + 体积雾，黄昏霓虹的味道是出来了。
 
-![黄昏 + 霓虹 + 泛光，三里屯的夜就是这味儿](assets/courier-godot-1289-dollars/effect-wall.jpg)
+![黄昏 + 霓虹 + 泛光，三里屯的夜就是这味儿](/api/media/uploads/2026/07/1785152789366-effect-wall.jpg)
 
 真正把我俩磨了大半天的，是**导航**。我前前后后报了五六次 bug：「路径规划有问题」「还是有 bug」「你的导航系统还是有严重的 bug」——直到我实在没忍住：
 
@@ -144,4 +146,4 @@ A* 路网导航一上，路终于走对了。中间镜头还老卡住（我截�
 - 素材：CC0 HDRI + PBR（Poly Haven）+ 程序化 shader + MiniMax 音乐，均登记于 `CREDITS.md`
 - 成本统计：`cccost`（本地扫描 Claude Code 日志，$1289.28）
 
-<video src="assets/courier-godot-1289-dollars/gameplay-full.mp4" controls playsinline preload="none" poster="assets/courier-godot-1289-dollars/gameplay-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1785152808748-gameplay-full.mp4" controls playsinline preload="none" poster="/api/media/uploads/2026/07/1785152755540-gameplay-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>

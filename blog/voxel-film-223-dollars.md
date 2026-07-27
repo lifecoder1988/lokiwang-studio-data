@@ -3,8 +3,10 @@ title: 14 句话 223 刀，Claude 一天拍了两部方块电影
 slug: voxel-film-223-dollars
 date: 2026-07-26
 tags: [claude, claude-code, three-js, voxel, ai-film, cccost]
-status: draft
-cover: assets/voxel-film-223-dollars/cover.png
+status: published
+published_url: https://lokiwang.com/journal/voxel-film-223-dollars
+post_id: 193
+cover: /api/media/uploads/2026/07/1785152820194-cover.png
 ---
 
 # 14 句话 223 刀，Claude 一天拍了两部方块电影
@@ -19,7 +21,7 @@ cover: assets/voxel-film-223-dollars/cover.png
 
 先看第二部，98 秒，画面声音字幕全是它自己生成的：
 
-<video src="assets/voxel-film-223-dollars/film-dwarfs.mp4" controls playsinline preload="metadata" poster="assets/voxel-film-223-dollars/film-dwarfs-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1785152861047-film-dwarfs.mp4" controls playsinline preload="metadata" poster="/api/media/uploads/2026/07/1785152822187-film-dwarfs-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
 
 照例声明：剧本、美术、配音、音效全是 AI 生成，零现成资产，非商业纯学习。
 
@@ -71,9 +73,9 @@ AI 防 AI 画大饼……这钱花得比什么都值。
 
 坠谷。片尾她把阿隼拉上来：「换我了。」
 
-<video src="assets/voxel-film-223-dollars/film-hero.mp4" controls playsinline preload="metadata" poster="assets/voxel-film-223-dollars/film-hero-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1785152875359-film-hero.mp4" controls playsinline preload="metadata" poster="/api/media/uploads/2026/07/1785152824227-film-hero-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
 
-![阿萤：「你太重了。」桥板脱落，铁颚坠谷](assets/voxel-film-223-dollars/still-heavy.png)
+![阿萤：「你太重了。」桥板脱落，铁颚坠谷](/api/media/uploads/2026/07/1785152828176-still-heavy.png)
 
 102 秒、17 个镜头、9 句台词。英雄救美是我点的题，「美救英雄」是它自己加的戏。
 
@@ -87,9 +89,9 @@ AI 防 AI 画大饼……这钱花得比什么都值。
 
 **引擎一行没改**，纯换剧本：公主小莓被巫婆乌婆绑在千年巨树上，七个小矮人（犟头、老明白、阿嚏、盹盹、乐呵、羞羞、憨憨）抬着一块木板来救人。
 
-![小莓被绑在巨树上，乌婆：「没人救得了你。」](assets/voxel-film-223-dollars/still-witch.png)
+![小莓被绑在巨树上，乌婆：「没人救得了你。」](/api/media/uploads/2026/07/1785152831314-still-witch.png)
 
-![七个小矮人排队过独木板，一人一色兜帽，远景也认得出谁是谁](assets/voxel-film-223-dollars/still-arrive.png)
+![七个小矮人排队过独木板，一人一色兜帽，远景也认得出谁是谁](/api/media/uploads/2026/07/1785152834455-still-arrive.png)
 
 第一部证明引擎能拍片，第二部证明它不是一次性布景。**从「是的 新剧本」到成片，两个多小时。**
 
@@ -99,11 +101,11 @@ AI 防 AI 画大饼……这钱花得比什么都值。
 
 然后羞羞指着阿嚏喊「他要打喷嚏！」——
 
-![阿嚏酝酿中，全员捂头](assets/voxel-film-223-dollars/still-sneeze.png)
+![阿嚏酝酿中，全员捂头](/api/media/uploads/2026/07/1785152837293-still-sneeze.png)
 
 一个巨型喷嚏把乌婆的法术书直接吹飞（「我的书！」），巫婆去追书，小矮人抄镐子砍绳救人。
 
-![阿——嚏！！法术书应声起飞](assets/voxel-film-223-dollars/gif-sneeze.gif)
+![阿——嚏！！法术书应声起飞](/api/media/uploads/2026/07/1785152840636-gif-sneeze.gif)
 
 16 句台词每句不超过 7 个字，包袱全靠画面抖。这是它自己写的分镜。
 
@@ -127,7 +129,7 @@ AI 防 AI 画大饼……这钱花得比什么都值。
 
 「太空漫步」它翻译成「步频没和位移速度匹配」，一次修对。全天我没看过一行代码。
 
-![公主踩着独木板过涧，「谢谢你们。」](assets/voxel-film-223-dollars/gif-plank.gif)
+![公主踩着独木板过涧，「谢谢你们。」](/api/media/uploads/2026/07/1785152847450-gif-plank.gif)
 
 ## 10 一键出片，比录屏干净
 
@@ -155,7 +157,7 @@ AI 防 AI 画大饼……这钱花得比什么都值。
 
 两部片其实讲的是同一个道理：
 
-![犟头：「我们够轻。」](assets/voxel-film-223-dollars/still-title.png)
+![犟头：「我们够轻。」](/api/media/uploads/2026/07/1785152850961-still-title.png)
 
 铁颚太重，桥塌了；七个小矮人够轻，排着队全过去了。
 

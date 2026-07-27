@@ -3,8 +3,10 @@ title: 7 句话 154 刀，我让 Claude 手搓了个水墨格斗游戏——全�
 slug: ink-fighter-godot-154-dollars
 date: 2026-07-21
 tags: [claude, claude-code, godot, game-dev, fable-5, ultracode]
-status: draft
-cover: assets/ink-fighter-godot-154-dollars/cover.png
+status: published
+published_url: https://lokiwang.com/journal/ink-fighter-godot-154-dollars
+post_id: 187
+cover: /api/media/uploads/2026/07/1785152701522-cover.png
 ---
 
 # 7 句话 154 刀，我让 Claude 手搓了个水墨格斗游戏——全程一张图都没生成
@@ -19,7 +21,7 @@ cover: assets/ink-fighter-godot-154-dollars/cover.png
 
 换来的是一个能打满三局两胜、有连招有大招、大招还带过场动画的水墨格斗游戏。先看 90 秒完整成片——这是两个 AI 自己打的（对，它自己打，后面说）：
 
-<video src="assets/ink-fighter-godot-154-dollars/gameplay-full.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1785152728953-gameplay-full.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
 
 照例声明：这是我自己瞎折腾的非商业练手项目，美术音频全部是程序化生成或 AI 合成的，没用任何现成素材。
 
@@ -33,7 +35,7 @@ cover: assets/ink-fighter-godot-154-dollars/cover.png
 
 剩下的它自己发挥：宣纸米白底 + 淡墨山峦，主角白衣 + 红围巾（红是全场唯一的高饱和色），反派通体墨黑、取名「墨影」。主角叫「一波超人」——对，谐音一拳超人，那个「波」是他攒满能量放出去的一道墨浪大招。
 
-![宣纸米白底 + 淡墨山峦，白衣红围巾的一波超人对峙通体墨黑的墨影](assets/ink-fighter-godot-154-dollars/faceoff.jpg)
+![宣纸米白底 + 淡墨山峦，白衣红围巾的一波超人对峙通体墨黑的墨影](/api/media/uploads/2026/07/1785152704434-faceoff.jpg)
 
 这张就是纯 `_draw()` 画的。你看到的每一根线、红围巾的每一次飘动、地上每一道墨渍，都是 GDScript 在**每一帧**用 `draw_polyline` / `draw_line` 现画的——提按笔触是靠线宽变化硬模拟出来的。我翻遍了仓库：零图片文件，一张都没有。
 
@@ -60,7 +62,7 @@ cover: assets/ink-fighter-godot-154-dollars/cover.png
 - **开发**——5 个分身同时下场，一人包一个模块：`core`（比赛流程）、`fighter`（状态机 + 物理）、`artvfx`（线条人渲染 + 特效）、`ui`（血条 / 大字播报）、`ai`（敌人 AI），各写各的文件互不打架。
 - **集成 → 验证 → 修复 → 治理**，一条龙走完。
 
-![一整局的巡屏抽帧：第 2 回合、连击计数、大招切入、墨影胜利、KO 定格](assets/ink-fighter-godot-154-dollars/contact-sheet.jpg)
+![一整局的巡屏抽帧：第 2 回合、连击计数、大招切入、墨影胜利、KO 定格](/api/media/uploads/2026/07/1785152707226-contact-sheet.jpg)
 
 （说白了我这次就当了回甩手包工头，它自己拉了个 12 人施工队进场……我连图纸都没画。）
 
@@ -68,7 +70,7 @@ cover: assets/ink-fighter-godot-154-dollars/cover.png
 
 验证阶段它自己跑 `--demo` 表演模式截了图，然后**逐张看**。第一条 major 问题它自己揪了出来：
 
-![屏幕正中的「开始！」渲染成三个黑框方块，框里印着 5F00/59CB/FF01](assets/ink-fighter-godot-154-dollars/tofu-bug.jpg)
+![屏幕正中的「开始！」渲染成三个黑框方块，框里印着 5F00/59CB/FF01](/api/media/uploads/2026/07/1785152709837-tofu-bug.jpg)
 
 看画面正中——「开始！」三个字，硬生生显示成三个黑框，框里还印着 `5F00`、`59CB`、`FF01`。血条旁边的角色名也是一排微型乱码方块。
 
@@ -86,11 +88,11 @@ cover: assets/ink-fighter-godot-154-dollars/cover.png
 
 它的理解是：**给游戏做一个双 AI 表演模式**（`--demo`），两个「墨影」级别的 AI 互相真打，再用 Godot 自带的 Movie Maker 引擎级录制，画面和声音同步录下来。
 
-<video src="assets/ink-fighter-godot-154-dollars/gameplay-1round.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1785152739052-gameplay-1round.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
 
 这 60 秒是它自己打的一整回合：开场「第一回合！」→「开始！」，两个线条人入场对峙；中段一记重拳轰脸上——放射速度线炸开、浓墨飞溅、红围巾甩到身后；一回合打完自动开下一回合。全程有「啪！」「咚！」的拟声打击音（也是 MiniMax 拿拟声词 TTS 现配的）、喊招、KO 播报和铺底 BGM。
 
-![一波超人一记重拳轰在墨影脸上，漫画放射速度线炸开](assets/ink-fighter-godot-154-dollars/combat.jpg)
+![一波超人一记重拳轰在墨影脸上，漫画放射速度线炸开](/api/media/uploads/2026/07/1785152712307-combat.jpg)
 
 ## 06 三个嫌弃之，大招被它整成了 CG
 
@@ -104,9 +106,9 @@ cover: assets/ink-fighter-godot-154-dollars/cover.png
 
 **大招 CG 化**——这个它玩大了。现在放大招是一整套过场：起手**全场时停 0.9 秒**，屏幕收暗，一个巨大的书法字从 2.8 倍砸落带余震——主角是「波」，墨影是「墨」——带白晕描边、中心放射爆线，右下角还盖一枚朱砂印章（写着施放者名讳），相机同步推近 1.38 倍。
 
-![主角大招：巨大的书法「波」字，边上一枚朱砂印章，2 连击计数](assets/ink-fighter-godot-154-dollars/wave-super.jpg)
+![主角大招：巨大的书法「波」字，边上一枚朱砂印章，2 连击计数](/api/media/uploads/2026/07/1785152714981-wave-super.jpg)
 
-![墨影大招：书法「墨」字砸落，红色印章，超必杀切入画的排面](assets/ink-fighter-godot-154-dollars/ink-cutin.jpg)
+![墨影大招：书法「墨」字砸落，红色印章，超必杀切入画的排面](/api/media/uploads/2026/07/1785152717620-ink-cutin.jpg)
 
 （一个我明令「不许生成图片」的游戏，硬是给我整出了格斗游戏超必杀切入画的排面。这排面全是 `_draw()` 一笔一笔画的。）
 

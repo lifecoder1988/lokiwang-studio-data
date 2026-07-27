@@ -1,0 +1,9 @@
+IMG_cover /api/media/uploads/2026/07/1785152701522-cover.png
+IMG_faceoff /api/media/uploads/2026/07/1785152704434-faceoff.jpg
+IMG_contact-sheet /api/media/uploads/2026/07/1785152707226-contact-sheet.jpg
+IMG_tofu-bug /api/media/uploads/2026/07/1785152709837-tofu-bug.jpg
+IMG_combat /api/media/uploads/2026/07/1785152712307-combat.jpg
+IMG_wave-super /api/media/uploads/2026/07/1785152714981-wave-super.jpg
+IMG_ink-cutin /api/media/uploads/2026/07/1785152717620-ink-cutin.jpg
+VID_gameplay-full /api/media/uploads/2026/07/1785152728953-gameplay-full.mp4
+VID_gameplay-1round /api/media/uploads/2026/07/1785152739052-gameplay-1round.mp4

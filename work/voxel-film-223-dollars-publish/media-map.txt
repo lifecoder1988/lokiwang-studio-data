@@ -1,0 +1,12 @@
+IMG_cover /api/media/uploads/2026/07/1785152820194-cover.png
+IMG_film-dwarfs-poster /api/media/uploads/2026/07/1785152822187-film-dwarfs-poster.jpg
+IMG_film-hero-poster /api/media/uploads/2026/07/1785152824227-film-hero-poster.jpg
+IMG_still-heavy /api/media/uploads/2026/07/1785152828176-still-heavy.png
+IMG_still-witch /api/media/uploads/2026/07/1785152831314-still-witch.png
+IMG_still-arrive /api/media/uploads/2026/07/1785152834455-still-arrive.png
+IMG_still-sneeze /api/media/uploads/2026/07/1785152837293-still-sneeze.png
+IMG_gif-sneeze /api/media/uploads/2026/07/1785152840636-gif-sneeze.gif
+IMG_gif-plank /api/media/uploads/2026/07/1785152847450-gif-plank.gif
+IMG_still-title /api/media/uploads/2026/07/1785152850961-still-title.png
+VID_film-dwarfs /api/media/uploads/2026/07/1785152861047-film-dwarfs.mp4
+VID_film-hero /api/media/uploads/2026/07/1785152875359-film-hero.mp4
