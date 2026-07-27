@@ -1,3 +1,4 @@
 .env
 .wrangler/
 .blogenv
+.DS_Store

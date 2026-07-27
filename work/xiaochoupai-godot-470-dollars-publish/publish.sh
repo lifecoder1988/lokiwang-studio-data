@@ -1,0 +1,86 @@
+#!/bin/bash
+# 一键发布:上传媒体 → 生成终稿(中文) → 建草稿 → 发布
+# 前提: 同目录 .blogenv 里有 BLOG_ADMIN_USER=xxx / BLOG_ADMIN_PASS=yyy(shell 格式,勿提交 git)
+set -euo pipefail
+SCRATCH="$(cd "$(dirname "$0")" && pwd)"
+source "$SCRATCH/.blogenv"
+export BLOG_BASE_URL=https://lokiwang.com
+export BLOG_ADMIN_USER BLOG_ADMIN_PASS
+BLOGCTL=/Users/joe/code/joewang-studio/.claude/skills/blog-admin/cli/target/release/blogctl
+SLUG=xiaochoupai-godot-470-dollars
+TITLE='470 刀，Claude 手搓了个五行八仙牌局 Roguelike，最后揪出了自己藏得最深的 bug'
+ASSETS=/Users/joe/code/lokiwang-studio-data/blog/assets/$SLUG
+MAP=$SCRATCH/media-map.txt
+touch "$MAP"
+
+up() { # up <本地文件> <逻辑名>  —— 断点续传:已在 media-map 里就跳过
+  local f="$1" name="$2" url
+  if grep -q "^$name " "$MAP"; then echo "skip $name" >&2; return; fi
+  for i in 1 2 3 4 5; do
+    if url=$($BLOGCTL media upload "$f" | python3 -c "import json,sys; print(json.load(sys.stdin,strict=False)['url'])"); then
+      echo "$name $url" >> "$MAP"; echo "uploaded $name -> $url" >&2; return
+    fi
+    echo "retry $name ($i)" >&2; sleep 5
+  done
+  echo "FAILED $name" >&2; exit 1
+}
+
+# 封面(博客 16:9)
+up "$ASSETS/cover.png"           IMG_cover
+# 视频 poster 帧
+up "$ASSETS/gameplay-poster.jpg" IMG_gameplay-poster
+# 正文图片
+up "$ASSETS/shot-hero.png"       IMG_shot-hero
+up "$ASSETS/shot-ledger.png"     IMG_shot-ledger
+up "$ASSETS/shot-map.png"        IMG_shot-map
+up "$ASSETS/shot-shop.png"       IMG_shot-shop
+up "$ASSETS/shot-battle.png"     IMG_shot-battle
+up "$ASSETS/gif-play.gif"        IMG_gif-play
+up "$ASSETS/gif-chain.gif"       IMG_gif-chain
+# 视频
+up "$ASSETS/gameplay.mp4"        VID_gameplay
+
+# 生成终稿(替换视频占位符 + 图片路径, 去掉 H1)
+python3 - "$SCRATCH/draft.md" "$MAP" "$SCRATCH/final-post.md" "$SLUG" <<'PY'
+import sys, re
+draft, mapf, out, slug = sys.argv[1:5]
+urls = dict(line.split() for line in open(mapf) if line.strip())
+text = open(draft).read()
+VSTYLE = 'controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"'
+POSTERS = {'gameplay': 'IMG_gameplay-poster'}
+def vrepl(m):
+    name = m.group(1)
+    poster = f' poster="{urls[POSTERS[name]]}"' if name in POSTERS and POSTERS[name] in urls else ''
+    return f'<video src="{urls["VID_"+name]}" {VSTYLE}{poster}></video>'
+text = re.sub(r'<video src="\{\{V:([a-z0-9-]+)\}\}"></video>', vrepl, text)
+def irepl(m):
+    alt, fname = m.group(1), m.group(2)
+    key = 'IMG_' + fname.rsplit('.',1)[0]
+    return f'![{alt}]({urls[key]})' if key in urls else m.group(0)
+text = re.sub(rf'!\[([^\]]*)\]\(assets/{re.escape(slug)}/([^)]+)\)', irepl, text)
+text = re.sub(r'^# .*\n+', '', text, count=1)  # 标题走 --title,正文去掉 H1
+open(out,'w').write(text)
+missing = re.findall(r'\{\{V:[a-z0-9-]+\}\}|assets/'+re.escape(slug), text)
+if missing: print('WARN unresolved:', missing, file=sys.stderr); sys.exit(1)
+PY
+
+COVER=$(grep '^IMG_cover ' "$MAP" | cut -d' ' -f2)
+
+# 建草稿(中文正文 + 中文标题)
+POST_JSON=$($BLOGCTL posts create \
+  --title "$TITLE" \
+  --slug "$SLUG" --category Essays \
+  --tags "claude,claude-code,godot,roguelike,game-dev,cccost" \
+  --cover "$COVER" \
+  --content-file "$SCRATCH/final-post.md" --markdown)
+POST_ID=$(echo "$POST_JSON" | python3 -c "import json,sys; print(json.load(sys.stdin,strict=False)['id'])")
+echo "$POST_ID" > "$SCRATCH/post-id.txt"
+echo "post created: id=$POST_ID"
+
+# 发布
+$BLOGCTL posts publish "$POST_ID" >/dev/null && echo "post published: https://lokiwang.com/journal/$SLUG"
+
+echo
+echo "done. 收尾:"
+echo "  1) 回填 blog/$SLUG.md frontmatter 的 post_id=$POST_ID / published_url / status=published,正文媒体路径换成 media-map.txt 里的 /api/media URL"
+echo "  2) 公众号:blog/$SLUG.weixin.md 走 wechatsync(封面 assets/$SLUG/cover-mp.png)"
