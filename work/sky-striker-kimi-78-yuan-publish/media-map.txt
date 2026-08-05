@@ -1,1 +1,17 @@
-
+IMG_cover /api/media/uploads/2026/08/1785925605389-cover.png
+IMG_cover-mp /api/media/uploads/2026/08/1785925608375-cover-mp.png
+IMG_characters-final /api/media/uploads/2026/08/1785925610974-characters-final.png
+IMG_contact-sheet /api/media/uploads/2026/08/1785925613761-contact-sheet.jpg
+IMG_hud-assets /api/media/uploads/2026/08/1785925615735-hud-assets.png
+IMG_sprites-before-after /api/media/uploads/2026/08/1785925618727-sprites-before-after.png
+IMG_still-boss-entrance /api/media/uploads/2026/08/1785925620770-still-boss-entrance.jpg
+IMG_still-levelup /api/media/uploads/2026/08/1785925623811-still-levelup.jpg
+IMG_still-phase-two /api/media/uploads/2026/08/1785925626386-still-phase-two.jpg
+IMG_still-ultimate /api/media/uploads/2026/08/1785925628610-still-ultimate.jpg
+IMG_still-victory /api/media/uploads/2026/08/1785925630922-still-victory.jpg
+IMG_gif-boss-entrance /api/media/uploads/2026/08/1785925636169-gif-boss-entrance.gif
+IMG_gif-gameplay-levelup /api/media/uploads/2026/08/1785925640827-gif-gameplay-levelup.gif
+IMG_gif-phase-two /api/media/uploads/2026/08/1785925646668-gif-phase-two.gif
+IMG_gif-ultimate /api/media/uploads/2026/08/1785925650779-gif-ultimate.gif
+IMG_gif-victory /api/media/uploads/2026/08/1785925656067-gif-victory.gif
+VID_gameplay-full /api/media/uploads/2026/08/1785925663870-gameplay-full.mp4

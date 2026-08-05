@@ -1,23 +1,10 @@
----
-title: 花了 78 元，说了 14 句话，我用 Kimi 做了一款魂系飞行射击游戏
-slug: sky-striker-kimi-78-yuan
-date: 2026-08-05
-tags: [kimi, kimi-code, godot, game-dev, codex]
-status: published
-published_url: https://lokiwang.com/journal/sky-striker-kimi-78-yuan
-post_id: 211
-cover: /api/media/uploads/2026/08/1785925605389-cover.png
----
-
-# 花了 78 元，说了 14 句话，我用 Kimi 做了一款魂系飞行射击游戏
-
 这 **14 条创作消息**不是全在 Kimi Code 里：第一条是外部 Kimi Agent 创建提示，后面 13 条才是 Kimi Code 主会话人类消息，截止「commit && push」。子代理指令和后来的网络重试都不算。
 
 按 Kimi K3 API 标价折算约 **78 元**；但我是会员，这是 **API 等价成本**，不是额外扣款。
 
 先看 44.4 秒成片：升级、Boss、大招、二阶段，直到胜利……
 
-<video src="/api/media/uploads/2026/08/1785925663870-gameplay-full.mp4" controls playsinline></video>
+<video src="/api/media/uploads/2026/08/1785925663870-gameplay-full.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px" poster="/api/media/uploads/2026/08/1785925620770-still-boss-entrance.jpg"></video>
 
 ## 01 第一版，打开就是黑屏
 
