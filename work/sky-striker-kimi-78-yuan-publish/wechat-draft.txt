@@ -1,0 +1,32 @@
+WeChat Official Account draft record
+
+Status: DONE_WITH_CONCERNS
+Created via WechatSync: 2026-08-05 approximately 18:47 CST (the CLI did not return seconds)
+Recorded: 2026-08-05 18:53:05 CST
+Account: 有点东西的老王
+Platform: weixin / 微信公众号
+Draft ID: 100000530
+Editor path: https://mp.weixin.qq.com/cgi-bin/appmsg
+Editor URL note: authenticated query parameters intentionally omitted from this record
+Title: 花了 78 元，说了 14 句话，我用 Kimi 做了一款魂系飞行射击游戏
+Source: blog/sky-striker-kimi-78-yuan.weixin.md
+Cover: blog/assets/sky-striker-kimi-78-yuan/cover-mp.png
+
+WechatSync result checklist:
+[x] WeChat authentication confirmed for account “有点东西的老王”.
+[x] Exactly one WeChat draft was created; WechatSync returned draft-only status.
+[x] Exact source title was supplied to the draft.
+[x] cover-mp.png was supplied as the draft cover.
+[x] 11 local body images uploaded successfully, 0 failed.
+[x] All five GIF assets were among the successful uploads: gameplay/level-up, ultimate, Boss entrance, phase two, and victory.
+[x] Six informative/static body images were among the successful uploads: five gameplay stills plus sprites-before-after.png.
+[x] The synchronized source preserves sections 01–07, the API-equivalent-cost caveat, and contains no lokiwang.com/blog redirect.
+[x] No group send, publication, deletion, or unrelated-draft modification was performed.
+[x] No retry or duplicate draft was created.
+[ ] Native video insertion/playback verification intentionally left to the user under the revised acceptance boundary.
+
+Manual action explicitly assigned to the user:
+Insert blog/assets/sky-striker-kimi-78-yuan/gameplay-full.mp4 at the opening video position in this same draft (ID 100000530), then confirm native playback and sound before any publication. The local file is 44.400 seconds, 540x960, H.264 video with AAC audio.
+
+Concern:
+WechatSync's CLI uploaded local image references but did not report a native MP4 upload. Per the user's revised instruction, no further editor inspection or video insertion was attempted; video remains pending manual insertion in this same preserved draft.
