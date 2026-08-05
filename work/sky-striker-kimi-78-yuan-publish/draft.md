@@ -76,7 +76,7 @@ Boss 随即有了登场、二阶段和弹幕；代码里也出现了 `YOU DIED` 
 
 提交 `ec93820`：127 个文件，6,028 行新增。
 
-![录制成片中的胜利画面](assets/sky-striker-kimi-78-yuan/still-victory.jpg)
+![录制成片中的最终 Boss 阶段](assets/sky-striker-kimi-78-yuan/still-victory.jpg)
 
 账按证据截止点计算：
 

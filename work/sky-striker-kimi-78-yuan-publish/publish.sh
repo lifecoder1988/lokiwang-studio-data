@@ -3,13 +3,15 @@
 # 前提：同目录 .blogenv 含 BLOG_ADMIN_USER=xxx / BLOG_ADMIN_PASS=yyy（shell 格式，勿提交）。
 set -euo pipefail
 
-SCRATCH="$(cd "$(dirname "$0")" && pwd)"
-REPO_ROOT="$(cd "$SCRATCH/../.." && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+SCRATCH="${PUBLISH_SCRATCH:-$SCRIPT_DIR}"
+REPO_ROOT="${PUBLISH_REPO_ROOT:-$(cd "$SCRIPT_DIR/../.." && pwd)}"
 SLUG=sky-striker-kimi-78-yuan
 TITLE='花了 78 元，说了 14 句话，我用 Kimi 做了一款魂系飞行射击游戏'
 ASSETS="$REPO_ROOT/blog/assets/$SLUG"
 MAP="$SCRATCH/media-map.txt"
-BLOGCTL=/Users/joe/code/joewang-studio/.claude/skills/blog-admin/cli/target/release/blogctl
+POST_ID_FILE="$SCRATCH/post-id.txt"
+BLOGCTL="${BLOGCTL:-/Users/joe/code/joewang-studio/.claude/skills/blog-admin/cli/target/release/blogctl}"
 
 [[ -r "$SCRATCH/.blogenv" ]] || { echo "missing credentials: $SCRATCH/.blogenv" >&2; exit 1; }
 [[ -x "$BLOGCTL" ]] || { echo "missing blogctl: $BLOGCTL" >&2; exit 1; }
@@ -17,6 +19,13 @@ source "$SCRATCH/.blogenv"
 export BLOG_BASE_URL=https://lokiwang.com
 export BLOG_ADMIN_USER BLOG_ADMIN_PASS
 touch "$MAP"
+
+LOCK_DIR="$SCRATCH/.publish.lock"
+if ! mkdir "$LOCK_DIR" 2>/dev/null; then
+  echo "another publish run is active (or a stale lock exists): $LOCK_DIR" >&2
+  exit 1
+fi
+trap 'rmdir "$LOCK_DIR" 2>/dev/null || true' EXIT
 
 up() { # up <local-file> <logical-name> — media-map.txt makes retries idempotent.
   local file="$1" name="$2" url
@@ -109,18 +118,153 @@ PY
 COVER=$(awk '$1 == "IMG_cover" { print $2; exit }' "$MAP")
 [[ -n "$COVER" ]] || { echo "missing uploaded cover" >&2; exit 1; }
 
-POST_JSON=$("$BLOGCTL" posts create \
-  --title "$TITLE" \
-  --slug "$SLUG" --category Essays \
-  --tags "kimi,kimi-code,godot,game-dev,codex" \
-  --cover "$COVER" \
-  --content-file "$SCRATCH/final-post.md" --markdown)
-POST_ID=$(printf '%s' "$POST_JSON" | python3 -c "import json,sys; print(json.load(sys.stdin, strict=False)['id'])")
-printf '%s\n' "$POST_ID" > "$SCRATCH/post-id.txt"
-echo "post created: id=$POST_ID"
+inspect_remote_post() { # inspect_remote_post <expected-id> -> status
+  local expected_id="$1" post_json
+  if ! post_json=$("$BLOGCTL" posts get "$expected_id"); then
+    echo "post-id.txt points to missing/unreadable remote post: id=$expected_id" >&2
+    return 1
+  fi
+  printf '%s' "$post_json" | python3 -c '
+import json
+import sys
 
-"$BLOGCTL" posts publish "$POST_ID" >/dev/null
-echo "post published: https://lokiwang.com/journal/$SLUG"
+expected_id, expected_slug, expected_title = sys.argv[1:4]
+try:
+    post = json.load(sys.stdin, strict=False)
+except Exception as exc:
+    raise SystemExit(f"invalid remote post response for id={expected_id}: {exc}")
+if not isinstance(post, dict):
+    raise SystemExit(f"invalid remote post response for id={expected_id}: expected object")
+remote_id = post.get("id")
+if str(remote_id) != expected_id:
+    raise SystemExit(f"remote post ID mismatch: expected {expected_id}, got {remote_id!r}")
+remote_slug = post.get("slug")
+if remote_slug != expected_slug:
+    raise SystemExit(
+        f"remote post slug mismatch for id={expected_id}: "
+        f"expected {expected_slug!r}, got {remote_slug!r}"
+    )
+remote_title = post.get("title")
+if remote_title != expected_title:
+    raise SystemExit(
+        f"remote post title mismatch for id={expected_id}: "
+        f"expected {expected_title!r}, got {remote_title!r}"
+    )
+status = post.get("status")
+if not isinstance(status, str) or not status:
+    raise SystemExit(f"remote post has missing/malformed status: id={expected_id}, status={status!r}")
+print(status)
+' "$expected_id" "$SLUG" "$TITLE"
+}
+
+assert_no_ambiguous_remote() {
+  local list_json
+  if ! list_json=$("$BLOGCTL" posts list --status all --q "$SLUG" --page-size 20); then
+    echo "cannot inspect remote posts before create; refusing to create" >&2
+    return 1
+  fi
+  printf '%s' "$list_json" | python3 -c '
+import json
+import sys
+
+expected_slug, expected_title = sys.argv[1:3]
+try:
+    payload = json.load(sys.stdin, strict=False)
+    posts = payload["posts"]["items"]
+except Exception as exc:
+    raise SystemExit(f"invalid remote post-list response; refusing to create: {exc}")
+if not isinstance(posts, list):
+    raise SystemExit("invalid remote post-list response; refusing to create: posts.items is not a list")
+conflicts = [
+    post for post in posts
+    if isinstance(post, dict)
+    and (post.get("slug") == expected_slug or post.get("title") == expected_title)
+]
+if conflicts:
+    details = ", ".join(map(str, [
+        {
+            "id": post.get("id"),
+            "slug": post.get("slug"),
+            "title": post.get("title"),
+            "status": post.get("status"),
+        }
+        for post in conflicts
+    ]))
+    raise SystemExit(
+        "post-id.txt is absent but a matching remote post exists; refusing to create a duplicate. "
+        f"Recover and verify its ID first: {details}"
+    )
+' "$SLUG" "$TITLE"
+}
+
+record_post_id() {
+  local post_id="$1" tmp
+  tmp=$(mktemp "$SCRATCH/.post-id.txt.tmp.XXXXXX")
+  printf '%s\n' "$post_id" > "$tmp"
+  mv "$tmp" "$POST_ID_FILE"
+}
+
+publish_if_needed() {
+  local post_id="$1" status verified_status
+  if ! status=$(inspect_remote_post "$post_id"); then
+    return 1
+  fi
+  case "$status" in
+    published)
+      echo "post already published: id=$post_id; skip publish"
+      ;;
+    draft|unpublished)
+      "$BLOGCTL" posts publish "$post_id" >/dev/null
+      if ! verified_status=$(inspect_remote_post "$post_id"); then
+        return 1
+      fi
+      [[ "$verified_status" == published ]] || {
+        echo "publish did not reach published state: id=$post_id status=$verified_status" >&2
+        return 1
+      }
+      echo "post published: id=$post_id https://lokiwang.com/journal/$SLUG"
+      ;;
+    *)
+      echo "refusing to publish post in unexpected state: id=$post_id status=$status" >&2
+      return 1
+      ;;
+  esac
+}
+
+if [[ -e "$POST_ID_FILE" ]]; then
+  POST_ID=$(<"$POST_ID_FILE")
+  [[ "$POST_ID" =~ ^[1-9][0-9]*$ ]] || {
+    echo "malformed post ID in $POST_ID_FILE: expected one positive integer" >&2
+    exit 1
+  }
+  echo "reusing recorded post: id=$POST_ID"
+else
+  assert_no_ambiguous_remote
+  POST_JSON=$("$BLOGCTL" posts create \
+    --title "$TITLE" \
+    --slug "$SLUG" --category Essays \
+    --tags "kimi,kimi-code,godot,game-dev,codex" \
+    --cover "$COVER" \
+    --content-file "$SCRATCH/final-post.md" --markdown)
+  if ! POST_ID=$(printf '%s' "$POST_JSON" | python3 -c '
+import json
+import sys
+try:
+    post_id = json.load(sys.stdin, strict=False).get("id")
+except Exception as exc:
+    raise SystemExit(f"create returned invalid JSON: {exc}")
+if isinstance(post_id, bool) or not isinstance(post_id, int) or post_id <= 0:
+    raise SystemExit(f"create returned missing/malformed post ID: {post_id!r}")
+print(post_id)
+'); then
+    echo "post may have been created remotely, but its ID was not safely returned; refusing to retry" >&2
+    exit 1
+  fi
+  record_post_id "$POST_ID"
+  echo "post created and recorded: id=$POST_ID"
+fi
+
+publish_if_needed "$POST_ID"
 
 echo
 echo "done. 回填 blog/$SLUG.md 的 post_id、published_url、status 和媒体 URL。"

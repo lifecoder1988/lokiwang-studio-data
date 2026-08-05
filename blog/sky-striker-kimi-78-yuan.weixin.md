@@ -97,7 +97,7 @@ cover: assets/sky-striker-kimi-78-yuan/cover-mp.png
 
 15 点 18 分，最后一句人类消息：「commit && push」。对应提交是 `ec93820`，127 个文件、6,028 行新增。
 
-![录制成片中的胜利画面](assets/sky-striker-kimi-78-yuan/still-victory.jpg)
+![录制成片中的最终 Boss 阶段](assets/sky-striker-kimi-78-yuan/still-victory.jpg)
 
 ![GREAT FOE VANQUISHED](assets/sky-striker-kimi-78-yuan/gif-victory.gif)
 
