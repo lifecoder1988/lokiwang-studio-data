@@ -149,7 +149,7 @@ source_assets = Path(sys.argv[2])
 output_dir = Path(sys.argv[3])
 font_path = Path(sys.argv[4])
 
-TITLE = "Kimi 做出 Sky Striker，成本约 78 元"
+TITLE = "花了 78 元，说了 14 句话，我用 Kimi 做了一款魂系飞行射击游戏"
 COMPARISON_LABEL = "根据会话原始代码复现的初版 / 最终拟人版"
 CHARACTERS = [
     ("player.png", "Player"),
@@ -338,11 +338,11 @@ def cover_from_gameplay(size: tuple[int, int], destination: Path, title_size: in
 
     draw = ImageDraw.Draw(cover)
     title_font = font(title_size, "Bold")
-    lines = ["Kimi 做出 Sky Striker，", "成本约 78 元"]
+    lines = ["花了 78 元，说了 14 句话，", "我用 Kimi 做了一款", "魂系飞行射击游戏"]
     line_gap = int(title_size * 0.35)
     line_boxes = [draw.textbbox((0, 0), line, font=title_font) for line in lines]
     line_heights = [box[3] - box[1] for box in line_boxes]
-    total_height = sum(line_heights) + line_gap
+    total_height = sum(line_heights) + line_gap * (len(lines) - 1)
     y = (height - total_height) // 2
     left = int(width * 0.055)
     stroke = max(2, title_size // 24)
@@ -363,8 +363,8 @@ def cover_from_gameplay(size: tuple[int, int], destination: Path, title_size: in
     cover.convert("RGB").save(destination, optimize=True)
 
 
-cover_from_gameplay((1600, 900), output_dir / "cover.png", 88)
-cover_from_gameplay((900, 383), output_dir / "cover-mp.png", 43)
+cover_from_gameplay((1600, 900), output_dir / "cover.png", 70)
+cover_from_gameplay((900, 383), output_dir / "cover-mp.png", 35)
 PY
 
 printf 'Generated media in %s\n' "$OUTPUT_DIR"
