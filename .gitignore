@@ -2,3 +2,4 @@
 .wrangler/
 .blogenv
 .DS_Store
+.worktrees/
