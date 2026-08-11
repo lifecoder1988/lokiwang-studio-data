@@ -1,0 +1,10 @@
+IMG_cover /api/media/uploads/2026/08/1786446538133-cover.png
+IMG_shot-home /api/media/uploads/2026/08/1786446539999-shot-home.png
+IMG_shot-chat-lina /api/media/uploads/2026/08/1786446544502-shot-chat-lina.png
+IMG_lina-selfie /api/media/uploads/2026/08/1786446547657-lina-selfie.png
+IMG_shot-person /api/media/uploads/2026/08/1786446549424-shot-person.png
+IMG_shot-chat-chenyuan /api/media/uploads/2026/08/1786446551478-shot-chat-chenyuan.png
+IMG_shot-chat-suwanqing /api/media/uploads/2026/08/1786446553252-shot-chat-suwanqing.png
+IMG_shot-world /api/media/uploads/2026/08/1786446555814-shot-world.png
+IMG_shot-admin /api/media/uploads/2026/08/1786446558150-shot-admin.png
+IMG_shot-family /api/media/uploads/2026/08/1786446560100-shot-family.png
