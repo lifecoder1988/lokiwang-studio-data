@@ -1,0 +1,36 @@
+WeChat Official Account draft record
+
+Status: DONE
+Created via WechatSync: 2026-08-16 ~20:05 CST
+Account: 有点东西的老王
+Platform: weixin / 微信公众号
+Draft ID: 100000565
+Editor URL (auth params omitted): https://mp.weixin.qq.com/cgi-bin/appmsg (appmsgid=100000565)
+Title: 小县城万达开了 4 家弹珠店，我回家让 AI 造了一台柏青哥
+Source: blog/marble-master-pachinko.weixin.md
+Cover: blog/assets/marble-master-pachinko/cover-mp.png
+Token note: CLI expects WECHATSYNC_TOKEN; repo .env defines WECHATSYNC_CLI_TOKEN, exported as WECHATSYNC_TOKEN for the run.
+
+WechatSync result checklist:
+[x] WeChat authentication confirmed for account “有点东西的老王”.
+[x] Exactly one WeChat draft was created; WechatSync returned draft-only status.
+[x] Exact source title was supplied to the draft.
+[x] cover-mp.png was supplied as the draft cover.
+[x] 7 local body images uploaded successfully, 0 failed (4 GIF: around-panel / gameplay / reels / jackpot; 3 still: machine / miss / x10).
+[x] The synchronized source preserves sections 01–07 and both “📺 视频在博客原文” pointers.
+[x] No group send, publication, deletion, or unrelated-draft modification was performed.
+[x] No retry or duplicate draft was created.
+
+Manual actions explicitly assigned to the user:
+1. In draft 100000565, insert the two gameplay videos at the two “📺” note positions (or delete the notes):
+   - blog/assets/marble-master-pachinko/clip1-gameplay.mp4 (52s, 720x1200, H.264+AAC, faststart)
+   - blog/assets/marble-master-pachinko/clip2-jackpot.mp4 (33s, 720x1200, H.264+AAC, faststart)
+2. Review GIF autoplay and confirm before any publication.
+
+Blog publish: SKIPPED per user decision (2026-08-16). Credentials not available
+(no .blogenv, no loki-blog-admin keychain entry). To publish later:
+create work/marble-master-publish/.blogenv with BLOG_ADMIN_USER= / BLOG_ADMIN_PASS=,
+or add the password to keychain as loki-blog-admin, then run
+work/marble-master-publish/publish.sh (idempotent: media-map.txt + post-id.txt).
+After publishing, backfill blog/marble-master-pachinko.md front matter
+(post_id, published_url, status, remote media URLs).
