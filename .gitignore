@@ -3,3 +3,4 @@
 .blogenv
 .DS_Store
 .worktrees/
+.gstack/
