@@ -1,0 +1,11 @@
+IMG_cover /api/media/uploads/2026/08/1785844713490-cover.png
+IMG_01-cover-desktop /api/media/uploads/2026/08/1785844716092-01-cover-desktop.png
+IMG_02-calculator /api/media/uploads/2026/08/1785844718534-02-calculator.png
+IMG_03-price-overview /api/media/uploads/2026/08/1785844720903-03-price-overview.png
+IMG_04-subscriptions /api/media/uploads/2026/08/1785844723557-04-subscriptions.png
+IMG_05-benchmarks /api/media/uploads/2026/08/1785844726182-05-benchmarks.png
+IMG_06-calculator-heavy-usage /api/media/uploads/2026/08/1785844729426-06-calculator-heavy-usage.png
+IMG_07-dark-mode /api/media/uploads/2026/08/1785844733356-07-dark-mode.png
+IMG_08-mobile /api/media/uploads/2026/08/1785844735800-08-mobile.png
+IMG_09-cost-calculator /api/media/uploads/2026/08/1785844739145-09-cost-calculator.gif
+IMG_10-score-filter /api/media/uploads/2026/08/1785844742588-10-score-filter.gif
