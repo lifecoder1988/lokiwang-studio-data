@@ -151,7 +151,7 @@ godot --path . --write-movie /tmp/promo.avi \
 
 ![Promo video opening frame](assets/mpfb-godot-character-creator/still-title.jpg)
 
-Final cut: 45.97 seconds, 1280×720, 2.9 MB. Change the model and one command re-records it — worth a lot more than a screen capture.
+Final cut: 45.5 seconds, 1280×720, 2.9 MB. Change the model and one command re-records it — worth a lot more than a screen capture.
 
 ## 11 The day's ledger
 

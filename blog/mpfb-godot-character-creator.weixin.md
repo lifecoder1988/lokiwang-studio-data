@@ -111,7 +111,7 @@ elif event is InputEventMagnifyGesture and event.position.x > 400.0:
 
 我说「胸部最大的时候把衣服有点撑破了」——它去量了一下：**人体最大形变约 9 厘米，衣服只跟了 7.5–8.8 厘米，差 1.3 厘米**。
 
-![胸部形变时服装同步跟随](assets/mpfb-godot-character-creator/gif-breast-cloth.gif)
+![胸部形变时服装同步跟随](assets/mpfb-godot-character-creator/still-breast-cloth.jpg)
 
 它的处理方式我给满分：不是把整套衣服再加厚一圈，而是**只放大服装那一个 `breast_large` 形变**，留出 10–11 厘米余量。
 
@@ -162,7 +162,7 @@ godot --path . --write-movie /tmp/promo.avi \
 
 ![宣传片开场](assets/mpfb-godot-character-creator/still-title.jpg)
 
-成品 45.97 秒、1280×720、2.9 MB。模型改了随时能一条命令重录——这比录屏值钱多了。
+成品 45.5 秒、1280×720、2.9 MB。模型改了随时能一条命令重录——这比录屏值钱多了。
 
 ## 11 一天的账面
 

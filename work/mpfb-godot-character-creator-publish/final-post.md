@@ -6,7 +6,7 @@ It started with one question I asked about an open-source repo I couldn't even l
 
 Four hours and 36 minutes — 16 sentences — later, I had this:
 
-<video src="/api/media/uploads/2026/07/1785153945430-promo-full.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px" poster="/api/media/uploads/2026/07/1785153880900-promo-poster.jpg"></video>
+<video src="/api/media/uploads/2026/07/1785155374107-promo-full.mp4" controls playsinline preload="metadata" style="width:100%;border:1px solid #e5e5e5;border-radius:8px" poster="/api/media/uploads/2026/07/1785153880900-promo-poster.jpg"></video>
 
 Two disclaimers up front: the one doing the work here isn't Claude, it's **Codex (gpt-5.6, effort high)**; the body and clothing come from the open-source MPFB / MakeHuman project, system assets are CC0, non-commercial tinkering only.
 
@@ -61,7 +61,7 @@ In the end I opened a browser, downloaded a zip by hand, and dropped it in its l
 
 ![Real hair asset: the bob](/api/media/uploads/2026/07/1785153903716-still-hair.jpg)
 
-![Real MakeHuman system assets: short hair + work suit](/api/media/uploads/2026/07/1785153906322-still-worksuit.jpg)
+![Real MakeHuman system assets: short hair + work suit](/api/media/uploads/2026/07/1785155384682-still-worksuit.jpg)
 
 ## 05 The real assets' first act: burying the character
 
@@ -88,7 +88,7 @@ elif event is InputEventMagnifyGesture and event.position.x > 400.0:
 
 Handle all three event types and regular mice, Magic Mouse and trackpads all zoom.
 
-![360° orbit view](/api/media/uploads/2026/07/1785153911231-gif-orbit.gif)
+![360° orbit view](/api/media/uploads/2026/07/1785155382394-gif-orbit.gif)
 
 ## 07 The genuinely hard part: the clothes tearing
 
@@ -126,15 +126,15 @@ Skin tone is the one exception. It doesn't go through blend shapes at all: Godot
 
 Hair, beard, outfit, shoes, tattoos — every slot swaps or hides at runtime.
 
-![Hair, beard, outfit and shoes switching in sequence](/api/media/uploads/2026/07/1785153926842-gif-outfit.gif)
+![Hair, beard, outfit and shoes switching in sequence](/api/media/uploads/2026/07/1785155377714-gif-outfit.gif)
 
 The trick is **name-matched syncing**: the same 24 blend shape names exist on the body and on all 13 wearables, so one parameter moves 14 meshes at once.
 
 ![Beard: full beard](/api/media/uploads/2026/07/1785153929293-still-beard.jpg)
 
-![Shoes: sneakers / boots](/api/media/uploads/2026/07/1785153931459-still-shoes.jpg)
+![Shoes: sneakers / boots](/api/media/uploads/2026/07/1785155387636-still-shoes.jpg)
 
-![Procedurally generated, fully morphable tattoos](/api/media/uploads/2026/07/1785153933684-still-tattoo.jpg)
+![Procedurally generated, fully morphable tattoos](/api/media/uploads/2026/07/1785155389685-still-tattoo.jpg)
 
 ## 10 I asked for a promo video. It wrote a demo mode.
 
@@ -149,7 +149,7 @@ godot --path . --write-movie /tmp/promo.avi \
 
 ![Promo video opening frame](/api/media/uploads/2026/07/1785153935795-still-title.jpg)
 
-Final cut: 45.97 seconds, 1280×720, 2.9 MB. Change the model and one command re-records it — worth a lot more than a screen capture.
+Final cut: 45.5 seconds, 1280×720, 2.9 MB. Change the model and one command re-records it — worth a lot more than a screen capture.
 
 ## 11 The day's ledger
 
@@ -169,7 +169,7 @@ Morphable meshes: 14
 MPFB_CHARACTER_CREATOR_SELF_TEST_OK
 ```
 
-![360° back view](/api/media/uploads/2026/07/1785153938536-still-orbit-back.jpg)
+![360° back view](/api/media/uploads/2026/07/1785155392102-still-orbit-back.jpg)
 
 ## 12 Don't ship this to production yet
 
@@ -177,7 +177,7 @@ Its own list of limitations is more honest than anything I'd write: no skeleton,
 
 In other words: what exists today is a prototype that **runs, records and can keep growing** — not a system you'd ship.
 
-![Create your own 3D game character](/api/media/uploads/2026/07/1785153940755-still-ending.jpg)
+![Create your own 3D game character](/api/media/uploads/2026/07/1785155394356-still-ending.jpg)
 
 ## 13 What I actually took away
 

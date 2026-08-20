@@ -6,7 +6,7 @@ tags: [codex, godot, blender, mpfb, makehuman, blend-shape, game-dev]
 status: published
 published_url: https://lokiwang.com/journal/mpfb-godot-character-creator
 post_id: 196
-cover: /api/media/uploads/2026/07/1785153877740-cover.png
+cover: /api/media/uploads/2026/07/1785155369180-cover.png
 ---
 
 # 16 句话 4 小时，Codex 手搓了个 3D 捏人器，最难的是让衣服跟上身材
@@ -19,7 +19,7 @@ cover: /api/media/uploads/2026/07/1785153877740-cover.png
 
 4 小时 36 分、16 句话之后，我得到了这个：
 
-<video src="/api/media/uploads/2026/07/1785153945430-promo-full.mp4" controls playsinline preload="metadata" poster="/api/media/uploads/2026/07/1785153880900-promo-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
+<video src="/api/media/uploads/2026/07/1785155374107-promo-full.mp4" controls playsinline preload="metadata" poster="/api/media/uploads/2026/07/1785153880900-promo-poster.jpg" style="width:100%;border:1px solid #e5e5e5;border-radius:8px"></video>
 
 先声明两件事：这次干活的不是 Claude，是 **Codex（gpt-5.6，effort high）**；人体和服装来自开源的 MPFB / MakeHuman，系统资产是 CC0，非商业纯折腾。
 
@@ -74,7 +74,7 @@ cover: /api/media/uploads/2026/07/1785153877740-cover.png
 
 ![真实发型：波波头](/api/media/uploads/2026/07/1785153903716-still-hair.jpg)
 
-![真实 MakeHuman 系统资产：短发 + 工作套装](/api/media/uploads/2026/07/1785153906322-still-worksuit.jpg)
+![真实 MakeHuman 系统资产：短发 + 工作套装](/api/media/uploads/2026/07/1785155384682-still-worksuit.jpg)
 
 ## 05 真实资产进来的第一件事：把人埋了
 
@@ -101,7 +101,7 @@ elif event is InputEventMagnifyGesture and event.position.x > 400.0:
 
 三种事件全收，普通鼠标、Magic Mouse、触控板才都能缩放。
 
-![360° 环绕查看](/api/media/uploads/2026/07/1785153911231-gif-orbit.gif)
+![360° 环绕查看](/api/media/uploads/2026/07/1785155382394-gif-orbit.gif)
 
 ## 07 真正难的那一关：衣服撑破了
 
@@ -139,15 +139,15 @@ elif event is InputEventMagnifyGesture and event.position.x > 400.0:
 
 发型、胡须、服装、鞋子、纹身，每个槽位都能实时切换或隐藏。
 
-![发型、胡须、服装、鞋子连续切换](/api/media/uploads/2026/07/1785153926842-gif-outfit.gif)
+![发型、胡须、服装、鞋子连续切换](/api/media/uploads/2026/07/1785155377714-gif-outfit.gif)
 
 关键在于**同名同步**：24 个 Blend Shape 名字在人体和 13 件穿戴物上完全一致，改一个参数，14 个网格一起动。
 
 ![胡须：络腮胡](/api/media/uploads/2026/07/1785153929293-still-beard.jpg)
 
-![鞋子：运动鞋 / 靴子](/api/media/uploads/2026/07/1785153931459-still-shoes.jpg)
+![鞋子：运动鞋 / 靴子](/api/media/uploads/2026/07/1785155387636-still-shoes.jpg)
 
-![程序生成的可变形纹身](/api/media/uploads/2026/07/1785153933684-still-tattoo.jpg)
+![程序生成的可变形纹身](/api/media/uploads/2026/07/1785155389685-still-tattoo.jpg)
 
 ## 10 我让它录个宣传片，它写了个演示模式
 
@@ -162,7 +162,7 @@ godot --path . --write-movie /tmp/promo.avi \
 
 ![宣传片开场](/api/media/uploads/2026/07/1785153935795-still-title.jpg)
 
-成品 45.97 秒、1280×720、2.9 MB。模型改了随时能一条命令重录——这比录屏值钱多了。
+成品 45.5 秒、1280×720、2.9 MB。模型改了随时能一条命令重录——这比录屏值钱多了。
 
 ## 11 一天的账面
 
@@ -182,7 +182,7 @@ Morphable meshes: 14
 MPFB_CHARACTER_CREATOR_SELF_TEST_OK
 ```
 
-![360° 背面](/api/media/uploads/2026/07/1785153938536-still-orbit-back.jpg)
+![360° 背面](/api/media/uploads/2026/07/1785155392102-still-orbit-back.jpg)
 
 ## 12 别急着往生产里搬
 
@@ -190,7 +190,7 @@ MPFB_CHARACTER_CREATOR_SELF_TEST_OK
 
 也就是说，今天这个东西是**能演示、能录制、能继续长**的原型，不是能上线的系统。
 
-![创建属于你的 3D 游戏角色](/api/media/uploads/2026/07/1785153940755-still-ending.jpg)
+![创建属于你的 3D 游戏角色](/api/media/uploads/2026/07/1785155394356-still-ending.jpg)
 
 ## 13 我最大的收获
 
