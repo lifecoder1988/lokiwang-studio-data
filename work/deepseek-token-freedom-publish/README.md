@@ -3,8 +3,16 @@
 ## 已发布
 
 - 博客: post_id=220, https://lokiwang.com/journal/deepseek-token-freedom (中文终稿)
-- 公众号: 草稿已同步, appmsgid=100000607, 4 张图上传成功 (待后台确认群发)
-  见 https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=77&appmsgid=100000607
+- 公众号: 草稿已同步, appmsgid=100000612 (humanizer-zh 版, 4 张图已上传,待后台确认群发)
+  见 https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=77&appmsgid=100000612
+- 注意: 旧的公众号草稿 appmsgid=100000607 (未 humanize 版) 留在后台,群发前建议删掉避免重复。
+
+## 二版 (2026-08-26 晚, humanizer-zh 重排)
+
+- 用 `npx skills add https://github.com/op7418/Humanizer-zh.git` 安装的 humanizer-zh skill
+  去掉 AI 痕迹: 删金句、去破折号和粗体、打破三段式、改掉宣传腔;
+- **删掉「08 部署」整节** (保姆级五步 + 踩坑),正文现在 01-07 + 收尾;
+- 博客 post 220 内容已更新 (posts update),公众号新草稿 100000612。
 
 媒体 URL 见 `media-map.txt`;`blog/deepseek-token-freedom.md`(中文源稿)frontmatter 已回填
 post_id / published_url / cover,正文图片已换成 `/api/media/uploads/...`。
@@ -20,7 +28,8 @@ post_id / published_url / cover,正文图片已换成 `/api/media/uploads/...`�
    V4-Flash 输出高峰 9 元/百万, V4-Pro 27 元, 最高涨幅 1100%) + 本地隐私优先 +
    本地大模型能力上来 (两台 TP=2 可部署 284B 的 DS V4-Flash)」。
 
-全篇按 blog-writing-style (说人话) 重排: 01-08 数字小标题、短句、省略号、括号私货、金句收尾。
+全篇按 blog-writing-style (说人话) 重排: 数字小标题、短句、省略号、括号私货、金句收尾。
+(二版见下,已 humanize + 删部署节。)
 
 ## 重新发布
 
