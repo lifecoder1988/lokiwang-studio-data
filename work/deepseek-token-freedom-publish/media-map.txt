@@ -1,0 +1,4 @@
+IMG_rack /api/media/uploads/2026/08/1787718136580-rack.png
+IMG_pipeline /api/media/uploads/2026/08/1787718140858-pipeline.png
+IMG_bottleneck /api/media/uploads/2026/08/1787718149652-bottleneck.png
+IMG_grafana-temps /api/media/uploads/2026/08/1787718153492-grafana-temps.png
