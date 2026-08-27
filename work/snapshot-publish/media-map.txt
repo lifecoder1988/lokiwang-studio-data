@@ -1,0 +1,6 @@
+IMG_icon-1024 /api/media/uploads/2026/08/1787821849840-icon-1024.png
+IMG_arch-app /api/media/uploads/2026/08/1787821852934-arch-app.png
+IMG_ci-success /api/media/uploads/2026/08/1787821856479-ci-success.png
+IMG_annotate-demo /api/media/uploads/2026/08/1787821859561-annotate-demo.png
+IMG_pipeline-release /api/media/uploads/2026/08/1787821862925-pipeline-release.png
+IMG_site-screenshot-1200 /api/media/uploads/2026/08/1787821868737-site-screenshot-1200.png
