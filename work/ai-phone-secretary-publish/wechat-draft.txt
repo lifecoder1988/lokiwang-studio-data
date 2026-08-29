@@ -1,0 +1,33 @@
+WeChat Official Account draft record
+
+Status: DONE
+Created via WechatSync: 2026-08-29 CST
+Account: 有点东西的老王
+Platform: weixin / 微信公众号
+Draft ID: 100000638
+Editor URL (auth params omitted): https://mp.weixin.qq.com/cgi-bin/appmsg
+Title: 为了让 AI 替我接电话，我刷砖一块板子，折腾了整整一个月
+Source: blog/ai-phone-secretary.weixin.md
+Cover: blog/assets/ai-phone-secretary/cover-mp.png
+
+WechatSync result checklist:
+[x] WeChat authentication confirmed for account “有点东西的老王”.
+[x] Exactly one WeChat draft was created; WechatSync returned draft-only status.
+[x] Exact source title and cover were supplied to the draft.
+[x] 10 local body images uploaded successfully, 0 failed.
+[x] No group send, publication, deletion, or unrelated-draft modification was performed.
+[x] No retry or duplicate draft was created.
+
+Media note:
+- The original 166.3-second recording is visually static apart from the call timer and its AAC track is silent.
+- A muted 8-second proof clip was retained for the blog at:
+  blog/assets/ai-phone-secretary/call-connected-proof.mp4
+- WeChat receives the poster image and an explicit note instead of a misleading silent video.
+
+Manual action assigned to the user:
+1. Review draft 100000638 and confirm typography/crops before any group send.
+
+Blog remote publish:
+- Local source is ready at blog/ai-phone-secretary.md.
+- Remote publish requires BLOG_ADMIN_USER / BLOG_ADMIN_PASS through the repository's existing blogctl workflow.
+- No loki-blog-admin keychain item or .blogenv credentials were available on 2026-08-29.
